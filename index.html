@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUD</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="py-5">
+        <div class="container">
+
+            <div class="form-group">
+                <label for="">Product Name:</label>
+                <input type="text" name="" class="form-control" id="inputProductName">
+            </div>
+
+            <div class="form-group">
+                <label for="">Product Price:</label>
+                <input type="number" name="" class="form-control" id="inputProductPrice">
+            </div>
+
+            <div class="form-group">
+                <label for="">Product Category</label>
+                <input type="text" name="" class="form-control" id="inputProductCate">
+            </div>
+
+            <div class="form-group">
+                <label for="">Product Description</label>
+                <textarea name="" class="form-control" id="inputProductDesc"></textarea>
+            </div>
+
+            <div class="">
+                <button onclick="addProduct();" class="btn btn-info">Add Product</button>
+            </div>
+
+            <div class="py-5">
+                <input onkeyup="searchProducts();" type="text" id="inputProductSearch" placeholder="Search ..."
+                    class="w-50 m-auto form-control">
+            </div>
+
+            <div class="">
+                <table class="table text-center">
+                    <thead>
+                        <th>Index</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Category</th>
+                        <th>Product Desc</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="model-content">
+                            <div class="form-group py-1">
+                                <label for="">Product Name:</label>
+                                <input type="text" name="" class="form-control" id="productName">
+                            </div>
+
+                            <div class="form-group py-1">
+                                <label for="">Product Price:</label>
+                                <input type="number" name="" class="form-control" id="productPrice">
+                            </div>
+
+                            <div class="form-group py-1">
+                                <label for="">Product Category</label>
+                                <input type="text" name="" class="form-control" id="productCate">
+                            </div>
+
+                            <div class="form-group py-1">
+                                <label for="">Product Description</label>
+                                <textarea name="" class="form-control" id="productDesc"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer" id="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save
+                                changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
